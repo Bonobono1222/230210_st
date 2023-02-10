@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.animated-container {
+  position: relative;
+  width: 70%;
+  height: 30px auto;
+  background-color: blue;
+  margin: 30px auto;  
+}
+
+.wrapper img:nth-child(1) {
+ width: 50%;
+}
+
+.elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: ani1 1.5s linear alternate infinite;
+  /*이름-속도-어떻게 반복할건지(linear->일정한 속도로 움직여라)*/
+}
+
+@keyframes ani1 {
+  0% {
+  transform: translate(-15px, 0px);
+  scale: 1;
+  }
+
+  50% {
+    transform: translate(0px, -15px);
+    
+  }
+
+  100% {
+    transform: translate(-15px, 0px);
+}} /*0%는 애니메이션의 시작을 의미하고, 100%는 애니메이션의 종료를 의미한다.*/
